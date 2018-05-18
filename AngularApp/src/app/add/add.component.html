@@ -1,0 +1,68 @@
+<div class="addPet">
+  <h2>Know of a pet needing a home?</h2>
+  <div class="add_form">
+    <form (submit)="addPet()" #formData="ngForm">
+      <h4>Pet name : </h4>
+      <input
+        type="text"
+        class="form-control"
+        name="petToAdd.name"
+        required
+        [(ngModel)]="petToAdd.name"
+        #Fname="ngModel"
+      />
+      <h4>Pet type : </h4>
+      <input 
+        type="text"
+        class="form-control"
+        name="petToAdd.petType"
+        required
+        [(ngModel)]="petToAdd.petType"
+        #FpetType="ngModel"
+      />
+      <h4>Description : </h4>
+      <input
+        type="text"
+        class="form-control"
+        name="petToAdd.description"
+        required
+        [(ngModel)]="petToAdd.description"
+        #Fdescription="ngModel"
+      />
+      <h4>Skills : </h4>
+      <div class="skills">
+        <h5>Skill 1:</h5>
+        <input 
+          type="text"
+          class="form-control"
+          name="petToAdd.skills[0]"
+          [(ngModel)]="petToAdd.skills[0]"
+        />
+        <h5>Skill 2:</h5>
+        <input 
+          type="text"
+          class="form-control"
+          name="petToAdd.skills[1]"
+          [(ngModel)]="petToAdd.skills[1]"
+        />
+        <h5>Skill 3:</h5>
+        <input 
+          type="text"
+          class="form-control"
+          name="petToAdd.skills[2]"
+          [(ngModel)]="petToAdd.skills[2]"
+        />        
+      </div>
+
+      <br>
+      <input 
+        type="submit"
+        class="btn btn-info"
+        value="Add Pet"/>
+      <button class="btn btn-info" [routerLink]="['/']">Cancel</button>
+    </form>
+    <div *ngIf="message">
+        <h6 class="error" *ngFor="let m of message">{{m}}</h6>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div *ngIf="petSelected" class="onePet">
+    <h5 class="home"><a [routerLink]="['/']">Home</a></h5>
+    <h3>Details about {{petSelected.name}}</h3>
+    <table class="table" id="details">
+      <tr>
+        <th>Pet type: </th>
+        <td>{{petSelected.petType}}</td>
+      </tr>
+      <tr>
+        <th>Description: </th>
+        <td>{{petSelected.description}}</td>
+      </tr>
+      <tr>
+        <th>Skills: </th>
+        <td>
+          <ul *ngIf="petSelected.skills">
+            <li *ngFor="let skill of petSelected.skills">
+              {{skill}}
+            </li>            
+          </ul>
+
+        </td>
+      </tr>
+      <tr>
+        <th>Likes: </th>
+        <td>{{petSelected.like}}</td>
+      </tr>
+    </table>
+    <form class="like" (submit)="updatePet()" #formData="ngForm">
+      <input class="btn btn-secondary" [disabled]="formData.submitted"  type="submit" value="Like this pet!"/>
+    </form>
+    
+    <button class="btn btn-secondary" (click)="deletePet()">Adopt this pet!</button>
+  </div>
+  

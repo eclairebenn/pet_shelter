@@ -1,0 +1,31 @@
+.home{
+    text-align: right;
+    margin-right: 30px;
+}
+.update_form{
+    padding: 15px;
+    border: 1px solid rgb(146, 146, 146);
+
+}
+
+.skills{
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.skills h5{
+    display: inline-block;
+}
+
+.skills input{
+    display: inline;
+}
+
+.btn{
+    margin: 30px;
+    font-size: 20px;
+}
+
+.error{
+    color: red;
+}

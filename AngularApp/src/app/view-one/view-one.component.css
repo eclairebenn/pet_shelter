@@ -1,0 +1,24 @@
+.home{
+    text-align: right;
+    margin-right: 30px;
+}
+
+#details tr{
+    padding: 5px;
+
+}
+
+.like{
+    display: inline-block;
+}
+
+.btn{
+    margin: 30px;
+    font-weight: 20px;
+}
+
+ul{
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: -40px;
+}
